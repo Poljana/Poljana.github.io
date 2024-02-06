@@ -1,0 +1,133 @@
+
+header
+{
+    width: 100vw;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: var(--primary);
+    transition: all 0.1s ease;
+}
+
+#GOTYlogo
+{
+    transform: scale(0.2);
+    filter: invert(100%);
+    translate: -35% 0;
+}
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    width: 20em;
+    height: 2em;
+    gap: 2em;
+    font-size: 1.5em;
+}
+
+.navbar a
+{
+    color: #fffafa;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.navbar a:hover
+{
+    color: #ffc2d0;
+}
+
+.navbar a:active
+{
+    color: var(--accent);
+}
+
+.navicons
+{
+    display: none;
+}
+
+
+@media only screen and (max-width: 920px)
+{
+    #GOTYlogo,
+    ul.navbar
+    {
+        scale: 0.7;
+    }
+    
+    ul.navbar
+    {
+        right: -3.5em;
+    }
+
+    #GOTYlogo
+    {
+        translate: -40% 0;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    #GOTYlogo
+    {
+        scale: 0.7;
+        translate: -40% 0;
+    }
+    
+    ul.navbar
+    {
+        right: 1em;
+        scale: 1;
+        width: 9em;
+    }
+
+    ul.navtext
+    {
+        display: none;
+    }
+
+    ul.navicons 
+    {
+        translate: 1em 0.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    ul.navicons 
+    {
+        gap: 1.5em;
+        right: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 430px)
+{
+    #GOTYlogo
+    {
+        scale: 0.7;
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+    }
+    
+    ul.navbar
+    {
+        display: none;
+    }
+}

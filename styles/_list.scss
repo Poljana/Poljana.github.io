@@ -1,0 +1,112 @@
+
+.sekcija
+{
+    width: 100vw;
+    height: 100em;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    margin-top: 15em;
+}
+
+.sekcija--flexwrap
+{
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0em 3em;
+    gap: 2.5em;
+}
+
+.sekcija h2
+{
+    margin: 0px;
+    font-size: 4em;
+    width: 50%;
+    height: 3em;
+    text-align: start;
+}
+
+.game-description 
+{
+    width: 50%;
+    height: 55em;
+    background: var(--secondary);
+}
+
+.sekcija iframe
+{
+    margin-left: 7%;
+    margin-top: 4em;
+    width: 40em;
+    height: 20em;
+    border-radius: 2em;
+}
+
+.image-library
+{
+    width: 35%;
+    flex-grow: 0.8;
+    margin-top: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide
+{
+    .game-image
+    {
+        translate: 100% 0%;
+        filter: blur(0.5em);
+        opacity: 0;
+    }
+}
+
+.show
+{
+    .game-image
+    {
+        translate: 0% 0%;
+        filter: blur(0em);
+        opacity: 1;
+    }
+}
+
+.game-image
+{
+    width: 30em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid var(--accent);
+    border-left: 3px solid var(--accent);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.2em 1.5em #000;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.game-image img
+{
+    height: 20em;   
+    filter: brightness(0.85); 
+}
+
+.game-image:nth-child(1)
+{
+    transform: translateX(-20%);
+}
+
+.game-image:nth-child(2)
+{
+    transition-delay: 400ms;
+}
+
+.game-image:nth-child(3)
+{
+    transform: translateX(20%);
+    transition-delay: 800ms;
+}
